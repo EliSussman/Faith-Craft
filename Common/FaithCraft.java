@@ -6,8 +6,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 
-@Mod(modid = "FaithCraft", name = "FaithCraft", version = "1.0 Alpha")
-@NetworkMod( channels = {""}, clientSideRequired = true, serverSideRequired = true )
+@Mod( modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION )
+@NetworkMod( channels = {"Mod.CHANNELS"}, clientSideRequired = true, serverSideRequired = true )
 
 public class FaithCraft {
     
