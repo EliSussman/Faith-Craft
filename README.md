@@ -9,4 +9,4 @@ FaithCraft is a mod that has to do with but is not limited to religion of all sh
 
 ##### Wiki #####
 
-Come visit the FaithCraft wiki at <a>faithcraft.wikia.com</a>
+Come visit the FaithCraft wiki at <a>http://www.faithcraft.wikia.com</a>
