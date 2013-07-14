@@ -7,7 +7,7 @@ LIQUIDS:
 
 ITEMS:
 
--Goblet (Store Holy Water or Blood or Other Liquids)
+- Goblet (Store Holy Water or Blood or Other Liquids)
 
 BLOCKS:
 
