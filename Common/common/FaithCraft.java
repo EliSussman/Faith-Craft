@@ -1,5 +1,6 @@
 package common;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -19,6 +20,8 @@ public class FaithCraft {
 
     @Instance(ModInfo.NAME)
     public static FaithCraft instance;
+    
+    public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(), "FaithCraft");
     
     @SidedProxy(clientSide = "client.ClientProxy", serverSide = "CommonProxy")
     public static CommonProxy proxy;
