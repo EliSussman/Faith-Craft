@@ -7,10 +7,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
-public class Cross extends Item {
+public class Quran extends Item {
     private String itemName;
 
-    public Cross(int par1, String name) {
+    public Quran(int par1, String name) {
         super(par1);
         this.itemName = name;
         this.setUnlocalizedName(name);

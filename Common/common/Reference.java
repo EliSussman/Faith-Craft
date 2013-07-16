@@ -4,7 +4,7 @@ public class Reference {
     public static final String modTextureID = "faithcraft";
     public static final String modid = modTextureID;
 
-    private static final String LANG_RESOURCE_LOCATION = "/assets/FaithCraft/lang/";
+    private static final String LANG_RESOURCE_LOCATION = "/Resources/assets/faithcraft/lang/";
 
     public static String[] localeFiles = {LANG_RESOURCE_LOCATION + "en_US.xml"};
 }
