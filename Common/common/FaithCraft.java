@@ -34,11 +34,15 @@ public class FaithCraft {
     public void preInit(FMLPreInitializationEvent event) {
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
+        
+        IDHandler.runConfiguration(config);
+        config.save();
+        
         BlockHandler.configureBlocks(config);
         ItemHandler.configureItems(config);
-        config.save();
-        BlockHandler.registerBlocks(new GameRegistry());
-        ItemHandler.registerItems(new GameRegistry());
+        
+        proxy.init();
+        LocaleHandler.loadLanguages();
         
         craftingRecipes();
         smeltingRecipes();
