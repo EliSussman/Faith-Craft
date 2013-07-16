@@ -1,5 +1,7 @@
 package common;
 
+import common.blocks.BlockHandler;
+import common.items.ItemHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
@@ -18,6 +20,8 @@ import client.ClientProxy;
 @NetworkMod(serverSideRequired = false, clientSideRequired = true)
 public class FaithCraft {
 
+    static int startEntityId = 300;
+    
     @Instance(ModInfo.NAME)
     public static FaithCraft instance;
     
@@ -31,16 +35,29 @@ public class FaithCraft {
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
         BlockHandler.configureBlocks(config);
+        ItemHandler.configureItems(config);
         config.save();
         BlockHandler.registerBlocks(new GameRegistry());
-        BlockHandler.setNames(new LanguageRegistry());
+        ItemHandler.registerItems(new GameRegistry());
+        
+        craftingRecipes();
+        smeltingRecipes();
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
 
     }
-
+    
+    private static void craftingRecipes() {
+    
+    }
+    
+    private static void smeltingRecipes() {
+        
+    }
+    
+    
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
