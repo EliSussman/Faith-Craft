@@ -1,5 +1,7 @@
 package common;
 
+import common.items.ItemHandler;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -16,7 +18,7 @@ public class CreativeTab extends CreativeTabs {
     @Override
     @SideOnly(Side.CLIENT)
     public int getTabIconItemIndex() {
-        return Item.arrow.itemID;
+        return ItemHandler.Cross.itemID;
     }
 
     // Name of Tab
