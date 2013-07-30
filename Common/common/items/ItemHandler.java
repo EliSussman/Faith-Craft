@@ -33,4 +33,26 @@ public class ItemHandler {
         GameRegistry.registerItem(Quran, "Quran", Reference.modid);
         
     }
+    
+    // how the next 2 methods work are temporary
+    public static void addToObjectsList(){
+        FaithCraft.addToObjectList(Cross);
+        FaithCraft.addToObjectList(Torah);
+        FaithCraft.addToObjectList(Bible);
+        FaithCraft.addToObjectList(Quran);
+    }
+    
+    public static void addNames(){
+        //en_US
+        FaithCraft.addToNameList("Cross");
+        FaithCraft.addToNameList("Torah");
+        FaithCraft.addToNameList("Bible");
+        FaithCraft.addToNameList("Quran");
+        
+        //en_PI
+        FaithCraft.addToNameList("Stick Thingy");
+        FaithCraft.addToNameList("10 Comandments");
+        FaithCraft.addToNameList("Holy Book");
+        FaithCraft.addToNameList("Crap");
+    }
 }

@@ -1,24 +1,22 @@
 package common;
 
+import java.util.List;
+
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class LocaleHandler {
 
-    public static boolean isXMLLanguageFile(String fileName) {
-
-        return fileName.endsWith(".xml");
+    public static void addLocalizations() {
+        FaithCraft.addToLocalizationList("en_US");
+        FaithCraft.addToLocalizationList("en_PT"); //en_PT is the pirate one, so have fun with it!!
     }
 
-    public static String getLocaleFromFileName(String fileName) {
-
-        return fileName.substring(fileName.lastIndexOf('/') + 1, fileName.lastIndexOf('.'));
-    }
-
-    public static void loadLanguages() {
-
-        // For every file specified in the Localization library class, load them into the Language Registry
-        for (String localizationFile : Reference.localeFiles) {
-            LanguageRegistry.instance().loadLocalization(localizationFile, getLocaleFromFileName(localizationFile), isXMLLanguageFile(localizationFile));
+    // Not temporary, will be working around this
+    public static void loadLanguages(List<Object> objects, List<String> localizations, List<String> names) {
+        for (int i = 0; i < localizations.size(); i++) {
+            for (int j = 0; j < objects.size(); j++) {
+                LanguageRegistry.instance().addNameForObject(objects.get(j), localizations.get(i), names.get(j + (objects.size() * i)));
+            }
         }
     }
 }
