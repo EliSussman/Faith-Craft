@@ -16,7 +16,7 @@ public class BlockHandler {
     static Block altar;
 
     public static void configureBlocks(Configuration config) {
-        altar = new Altar(IDHandler.AltarID, Material.rock).setUnlocalizedName("blockAltar").setCreativeTab(CreativeTabs.tabBlock);
+        altar = new Altar(IDHandler.AltarID, Material.rock).setUnlocalizedName("blockAltar").setCreativeTab(FaithCraft.modTab);
 
         registerBlocks(new GameRegistry()); // keep this at the end spent an hour trying to figure out why the block wasn't there.. it wasn't called anywhere....
     }

@@ -18,7 +18,7 @@ public class CreativeTab extends CreativeTabs {
     @Override
     @SideOnly(Side.CLIENT)
     public int getTabIconItemIndex() {
-        return ItemHandler.Cross.itemID;
+        return IDHandler.AltarID;
     }
 
     // Name of Tab
