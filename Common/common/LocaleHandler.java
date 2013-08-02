@@ -8,7 +8,8 @@ public class LocaleHandler {
 
     public static void addLocalizations() {
         FaithCraft.addToLocalizationList("en_US");
-        FaithCraft.addToLocalizationList("en_PT"); //en_PT is the pirate one, so have fun with it!!
+        FaithCraft.addToLocalizationList("en_PT"); // en_PT is the pirate one,
+                                                   // so have fun with it!!
     }
 
     // Not temporary, will be working around this

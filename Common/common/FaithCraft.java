@@ -32,7 +32,7 @@ public class FaithCraft {
     
     public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(), "FaithCraft");
     
-    @SidedProxy(clientSide = "client.ClientProxy", serverSide = "CommonProxy")
+    @SidedProxy(clientSide = "client.ClientProxy", serverSide = "common.CommonProxy")
     public static CommonProxy proxy;
 
     @EventHandler
@@ -49,21 +49,12 @@ public class FaithCraft {
         BlockHandler.addToObjectsList();
         ItemHandler.addToObjectsList();
         
-        BlockHandler.addToObjectsList();
+        BlockHandler.addNames();
         ItemHandler.addNames();
         
         proxy.init();
         
         LocaleHandler.addLocalizations();
-        if(objects.isEmpty()||names.isEmpty()||localizations.isEmpty()){
-            String error = "ERROR!!!";
-            if(objects.isEmpty())error+="1";
-            if(names.isEmpty())error+="2";
-            if(localizations.isEmpty())error+="3";
-            for(int i = 0; i<20;i++){
-                System.out.println(error);
-            }
-        }
         LocaleHandler.loadLanguages(objects, localizations, names);
         
         craftingRecipes();
