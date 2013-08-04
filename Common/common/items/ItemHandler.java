@@ -20,8 +20,8 @@ public class ItemHandler {
        
         Cross = new Cross(IDHandler.CrossID, "Cross").setCreativeTab(FaithCraft.modTab);
         Torah = new Torah(IDHandler.TorahID, "Torah").setCreativeTab(FaithCraft.modTab);
-        Bible = new Torah(IDHandler.BibleID, "Bible").setCreativeTab(FaithCraft.modTab);
-        Quran = new Torah(IDHandler.QuranID, "Quran").setCreativeTab(FaithCraft.modTab);
+        Bible = new Bible(IDHandler.BibleID, "Bible").setCreativeTab(FaithCraft.modTab);
+        Quran = new Quran(IDHandler.QuranID, "Quran").setCreativeTab(FaithCraft.modTab);
         
     }
 
@@ -53,6 +53,6 @@ public class ItemHandler {
         FaithCraft.addToNameList("Stick Thingy");
         FaithCraft.addToNameList("10 Comandments");
         FaithCraft.addToNameList("Holy Book");
-        FaithCraft.addToNameList("Crap");
+        FaithCraft.addToNameList("Book of Mecca");
     }
 }
