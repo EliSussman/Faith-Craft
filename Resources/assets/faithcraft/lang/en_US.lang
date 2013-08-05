@@ -1,0 +1,11 @@
+
+language.name=English
+language.region=US
+language.code=en_US
+
+item.Cross.name=Cross
+item.Torah.name=Torah
+item.Bible.name=Bible
+item.Quran.name=Quran
+
+tile.Altar.name=Altar
