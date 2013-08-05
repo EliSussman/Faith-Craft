@@ -25,13 +25,12 @@ public class FaithCraft {
     static int startEntityId = 300;
     static List<Object> objects = new ArrayList<Object>();
     static List<String> names = new ArrayList<String>();
-    static List<String> localizations = new ArrayList<String>();
-    
+
     @Instance(ModInfo.NAME)
     public static FaithCraft instance;
-    
+
     public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(), "FaithCraft");
-    
+
     @SidedProxy(clientSide = "client.ClientProxy", serverSide = "common.CommonProxy")
     public static CommonProxy proxy;
 
@@ -39,24 +38,23 @@ public class FaithCraft {
     public void preInit(FMLPreInitializationEvent event) {
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
-        
+
         IDHandler.runConfiguration(config);
         config.save();
-        
+
         BlockHandler.configureBlocks(config);
         ItemHandler.configureItems(config);
-        
+
         BlockHandler.addToObjectsList();
         ItemHandler.addToObjectsList();
-        
+
         BlockHandler.addNames();
         ItemHandler.addNames();
-        
+
         proxy.init();
-        
-        LocaleHandler.addLocalizations();
-        LocaleHandler.loadLanguages(objects, localizations, names);
-        
+
+        LocaleHandler.loadLanguages(objects, names);
+
         craftingRecipes();
         smeltingRecipes();
     }
@@ -65,28 +63,25 @@ public class FaithCraft {
     public void init(FMLInitializationEvent event) {
 
     }
-    
-    public static void addToObjectList(Object object){
+
+    public static void addToObjectList(Object object) {
         objects.add(object);
     }
-    public static void addToNameList(String name){
+
+    public static void addToNameList(String name) {
         names.add(name);
     }
-    public static void addToLocalizationList(String localization){
-        localizations.add(localization);
-    }
-    
+
     private static void craftingRecipes() {
-    
+
     }
-    
+
     private static void smeltingRecipes() {
-        
+
     }
-    
-    
+
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        
+
     }
 }

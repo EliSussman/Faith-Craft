@@ -1,11 +1,12 @@
 package common.items;
 
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.item.Item;
+
 import common.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.Item;
 
 public class Quran extends Item {
     private String itemName;

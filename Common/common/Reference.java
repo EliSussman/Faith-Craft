@@ -6,5 +6,5 @@ public class Reference {
 
     private static final String LANG_RESOURCE_LOCATION = "/assets/faithcraft/lang/";
 
-    public static String[] localeFiles = {LANG_RESOURCE_LOCATION + "en_US.xml"};
+    public static String[] localeFiles = { LANG_RESOURCE_LOCATION + "en_US.xml" };
 }
