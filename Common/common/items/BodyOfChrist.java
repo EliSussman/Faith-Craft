@@ -1,16 +1,17 @@
 package common.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 import common.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BodyOfChrist extends Item{
+public class BodyOfChrist extends ItemFood{
+    
     private String itemName;
-
-    public BodyOfChrist(int par1, String name) {
-        super(par1);
+    
+    public BodyOfChrist(int id, int hunger, float saturation, boolean wolfFood, String name) {
+        super(id, hunger, saturation, wolfFood);
         this.itemName = name;
         this.setUnlocalizedName(name);
     }

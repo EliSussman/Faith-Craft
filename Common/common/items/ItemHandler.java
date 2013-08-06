@@ -24,7 +24,7 @@ public class ItemHandler {
         Torah = new Torah(IDHandler.TorahID, "Torah").setCreativeTab(FaithCraft.modTab);
         Bible = new Bible(IDHandler.BibleID, "Bible").setCreativeTab(FaithCraft.modTab);
         Quran = new Quran(IDHandler.QuranID, "Quran").setCreativeTab(FaithCraft.modTab);
-        BodyOfChrist = new BodyOfChrist(IDHandler.BodyOfChristID, "BodyOfChrist").setCreativeTab(FaithCraft.modTab);
+        BodyOfChrist = new BodyOfChrist(IDHandler.BodyOfChristID, 10, 20.0F, false, "BodyOfChrist").setCreativeTab(FaithCraft.modTab);
 
     }
 
