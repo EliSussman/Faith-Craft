@@ -17,6 +17,7 @@ public class IDHandler {
     public static int TorahID;
     public static int BibleID;
     public static int QuranID;
+    public static int BodyOfChristID;
 
     // Liquid IDs
 
@@ -30,6 +31,7 @@ public class IDHandler {
         TorahID = config.get(itemids, "Torah ID", 1001).getInt();
         BibleID = config.get(itemids, "Bible ID", 1002).getInt();
         QuranID = config.get(itemids, "Quran ID", 1003).getInt();
+        BodyOfChristID = config.get(itemids, "Body Of Christ ID", 1004).getInt();
 
         // Liquid IDs
 

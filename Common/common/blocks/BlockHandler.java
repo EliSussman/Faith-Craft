@@ -29,7 +29,7 @@ public class BlockHandler {
     public static void addNames() {
         FaithCraft.addToNameList(altar.getUnlocalizedName().substring(5) + ":" + "Altar" + ":" + "en_US");
 
-        FaithCraft.addToNameList(altar.getUnlocalizedName().substring(5) + ":" + "Block of Worship" + ":" + "en_PT");
+        FaithCraft.addToNameList(altar.getUnlocalizedName().substring(5) + ":" + "Block O' Worship" + ":" + "en_PT");
     }
 
     public static void addToObjectsList() {
