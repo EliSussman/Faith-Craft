@@ -46,18 +46,4 @@ public class ItemHandler {
         FaithCraft.addToObjectList(Quran);
         FaithCraft.addToObjectList(BodyOfChrist);
     }
-
-    public static void addNames() {
-        FaithCraft.addToNameList(Cross.getUnlocalizedName().substring(5) + ":" + "Cross" + ":" + "en_US");
-        FaithCraft.addToNameList(Torah.getUnlocalizedName().substring(5) + ":" + "Torah" + ":" + "en_US");
-        FaithCraft.addToNameList(Bible.getUnlocalizedName().substring(5) + ":" + "Bible" + ":" + "en_US");
-        FaithCraft.addToNameList(Quran.getUnlocalizedName().substring(5) + ":" + "Quran" + ":" + "en_US");
-        FaithCraft.addToNameList(BodyOfChrist.getUnlocalizedName().substring(5) + ":" + "Body Of Christ" + ":" + "en_US");
-        
-        FaithCraft.addToNameList(Cross.getUnlocalizedName().substring(5) + ":" + "Stick Thingy" + ":" + "en_PT");
-        FaithCraft.addToNameList(Torah.getUnlocalizedName().substring(5) + ":" + "10 Commandments" + ":" + "en_PT");
-        FaithCraft.addToNameList(Bible.getUnlocalizedName().substring(5) + ":" + "Holy Words" + ":" + "en_PT");
-        FaithCraft.addToNameList(Quran.getUnlocalizedName().substring(5) + ":" + "Book O' Mecca" + ":" + "en_PT");
-        FaithCraft.addToNameList(BodyOfChrist.getUnlocalizedName().substring(5) + ":" + "Body O' Lord" + ":" + "en_PT");
-    }
 }

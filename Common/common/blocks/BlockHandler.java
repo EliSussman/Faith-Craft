@@ -26,12 +26,6 @@ public class BlockHandler {
         registry.registerBlock(altar, "blockAltar");
     }
 
-    public static void addNames() {
-        FaithCraft.addToNameList(altar.getUnlocalizedName().substring(5) + ":" + "Altar" + ":" + "en_US");
-
-        FaithCraft.addToNameList(altar.getUnlocalizedName().substring(5) + ":" + "Block O' Worship" + ":" + "en_PT");
-    }
-
     public static void addToObjectsList() {
         FaithCraft.addToObjectList(altar);
     }

@@ -1,11 +1,7 @@
+Cross=Stick Thingy
+Torah=10 Commandments
+Bible=Holy Words
+Quran=Book O' Mecca
+BodyOfChrist=Meat of the Fallen One
 
-language.name=Pirate Speak
-language.region=PIRATE
-language.code=en_PT
-
-item.Cross.name=Stick Thingy
-item.Torah.name=10 Commandments
-item.Bible.name=Holy Words
-item.Quran.name=Book O' Mecca
-
-tile.Altar.name=Block O' Worship
+blockAltar=Block O' Worship

@@ -21,9 +21,9 @@ public class Torah extends Item {
     public void registerIcons(IconRegister register) {
         this.itemIcon = register.registerIcon(Reference.modid + ":" + (this.getUnlocalizedName().substring(5)));
     }
-    
+
     @Override
-    public boolean hasEffect(ItemStack par1ItemStack){
+    public boolean hasEffect(ItemStack par1ItemStack) {
         return true;
     }
 

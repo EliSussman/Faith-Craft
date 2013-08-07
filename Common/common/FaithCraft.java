@@ -5,10 +5,8 @@ import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.Configuration;
-
 import common.blocks.BlockHandler;
 import common.items.ItemHandler;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -48,11 +46,9 @@ public class FaithCraft {
         BlockHandler.addToObjectsList();
         ItemHandler.addToObjectsList();
 
-        BlockHandler.addNames();
-        ItemHandler.addNames();
-
         proxy.init();
 
+        LocaleHandler.getNames(names, "../assets/faithcraft/lang/");
         LocaleHandler.loadLanguages(objects, names);
 
         craftingRecipes();
