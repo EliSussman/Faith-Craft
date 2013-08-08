@@ -7,7 +7,7 @@ public class IDHandler {
     // Configuration categories
     public static String blockids = "Block IDs";
     public static String itemids = "Item IDs";
-    public static String liquidids = "Liquid IDs";
+    public static String fluidids = "Fluid IDs";
 
     // Block IDs
     public static int AltarID;
@@ -20,6 +20,7 @@ public class IDHandler {
     public static int BodyOfChristID;
 
     // Liquid IDs
+    public static int WineID;
 
     public static void runConfiguration(Configuration config) {
 
@@ -34,6 +35,7 @@ public class IDHandler {
         BodyOfChristID = config.get(itemids, "Body Of Christ ID", 1004).getInt();
 
         // Liquid IDs
+        WineID = config.get(fluidids, "Wine ID", 3000).getInt();
 
     }
 
