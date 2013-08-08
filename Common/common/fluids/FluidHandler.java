@@ -1,5 +1,6 @@
 package common.fluids;
 
+import common.FaithCraft;
 import common.IDHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -16,14 +17,14 @@ public class FluidHandler{
     }
 
     private static void initializeLiquids(){
-        Wine = new BlockWine(IDHandler.WineID, Wine, Material.water);
+        Wine = new BlockWine(3000, Wine, Material.water).getFluid();
     }
 
     private static void initializeContainers(){
         
     }
 
-    private static void registerBlocks(){
-        GameRegistry.registerBlock(Wine, "Wine");
+    public static void registerFluid(Fluid registry) {
+        registerFluid(Wine);
     }
 }

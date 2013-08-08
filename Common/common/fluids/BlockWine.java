@@ -1,5 +1,6 @@
 package common.fluids;
 
+import common.FaithCraft;
 import common.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,6 +20,7 @@ public class BlockWine extends BlockFluidClassic{
     public BlockWine(int id, Fluid fluid, Material material) {
         super(id, fluid, material);
         stack = new FluidStack(fluid, FluidContainerRegistry.BUCKET_VOLUME);
+        this.setCreativeTab(FaithCraft.modTab);
     }
     
     @Override
