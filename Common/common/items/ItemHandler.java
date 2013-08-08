@@ -17,6 +17,7 @@ public class ItemHandler {
     public static Item Bible;
     public static Item Quran;
     public static Item BodyOfChrist;
+    public static Item WineBucket;
 
     public static void configureItems(Configuration config) {
 
@@ -25,6 +26,7 @@ public class ItemHandler {
         Bible = new Bible(IDHandler.BibleID, "Bible").setCreativeTab(FaithCraft.modTab);
         Quran = new Quran(IDHandler.QuranID, "Quran").setCreativeTab(FaithCraft.modTab);
         BodyOfChrist = new BodyOfChrist(IDHandler.BodyOfChristID, 10, 20.0F, false, "BodyOfChrist").setCreativeTab(FaithCraft.modTab);
+        WineBucket = new WineBucket(IDHandler.WineBucketID, 1, "WineBucket").setCreativeTab(FaithCraft.modTab);
 
     }
 
@@ -35,6 +37,7 @@ public class ItemHandler {
         GameRegistry.registerItem(Bible, "Bible", Reference.modid);
         GameRegistry.registerItem(Quran, "Quran", Reference.modid);
         GameRegistry.registerItem(BodyOfChrist, "Body Of Christ", Reference.modid);
+        GameRegistry.registerItem(WineBucket, "Wine Bucket", Reference.modid);
 
     }
 
@@ -45,5 +48,6 @@ public class ItemHandler {
         FaithCraft.addToObjectList(Bible);
         FaithCraft.addToObjectList(Quran);
         FaithCraft.addToObjectList(BodyOfChrist);
+        FaithCraft.addToObjectList(WineBucket);
     }
 }
