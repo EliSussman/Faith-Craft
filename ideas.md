@@ -13,6 +13,17 @@
 
 
 
+##### OTHER: #####
+
+-Spawned In Temple With An Altar That Spawns In a Certain Biome
+
+-Speacil Biome (Promised Land?) That Spawns in a temple
+
+-Heaven Dimension With Angels That Sell Religious Items
+
+-Hell Dimension that Has Demons That Try To Kill You
+
+
 ### IMPLEMENTED IDEAS: ###
 ======================
 
@@ -25,5 +36,9 @@
 
 
 ##### BLOCKS: #####
+
+
+
+##### OTHER: #####
 
 
