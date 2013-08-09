@@ -1,12 +1,13 @@
 package common.items;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
-
+import net.minecraftforge.fluids.FluidContainerRegistry;
 import common.FaithCraft;
 import common.IDHandler;
 import common.Reference;
-
+import common.blocks.BlockHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemHandler {
@@ -49,5 +50,9 @@ public class ItemHandler {
         FaithCraft.addToObjectList(Quran);
         FaithCraft.addToObjectList(BodyOfChrist);
         FaithCraft.addToObjectList(WineBucket);
+    }
+    
+    private static void initializeContainers(){
+        FluidContainerRegistry.registerFluidContainer(BlockHandler.Wine, new ItemStack(ItemHandler.WineBucket, 1, 1), new ItemStack(Item.bucketEmpty));
     }
 }

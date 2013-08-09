@@ -5,10 +5,14 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.Icon;
 import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 
 public class Wine extends Fluid{
-    public Wine(String fluidName){
-        super(fluidName);
+    public Wine(){
+        super("Wine");
+        setDensity(7);
+        setViscosity(700);
+        FluidRegistry.registerFluid(this);
     }
 
     @Override

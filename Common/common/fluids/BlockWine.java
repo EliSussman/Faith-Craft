@@ -31,17 +31,13 @@ public class BlockWine extends BlockFluidClassic{
     
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
-    {
-        WineStillIcon = iconRegister.registerIcon(Reference.modid + ":" + "Wine");
-        WineFlowingIcon = iconRegister.registerIcon(Reference.modid + ":" + "WineFlowing");
+    public Icon getIcon(int side, int meta) {
+    return Block.waterMoving.getIcon(side, meta);
     }
-    
+
     @Override
-    @SideOnly(Side.CLIENT)
-    public Icon getIcon(int par1, int par2)
-    {
-        return par1 != 0 && par1 != 1 ? WineFlowingIcon : WineStillIcon;
+    public int colorMultiplier(IBlockAccess iblockaccess, int x, int y, int z){
+    return 0x990000; // HEX color code
     }
     
     
