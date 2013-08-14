@@ -27,7 +27,7 @@ public class ItemHandler {
         Bible = new Bible(IDHandler.BibleID, "Bible").setCreativeTab(FaithCraft.modTab);
         Quran = new Quran(IDHandler.QuranID, "Quran").setCreativeTab(FaithCraft.modTab);
         BodyOfChrist = new BodyOfChrist(IDHandler.BodyOfChristID, 10, 20.0F, false, "BodyOfChrist").setCreativeTab(FaithCraft.modTab);
-        WineBucket = new WineBucket(IDHandler.WineBucketID, 1, "WineBucket").setCreativeTab(FaithCraft.modTab);
+        WineBucket = new WineBucket(IDHandler.WineBucketID, IDHandler.WineID, "WineBucket").setCreativeTab(FaithCraft.modTab).setContainerItem(Item.bucketEmpty);
 
     }
 
@@ -51,8 +51,8 @@ public class ItemHandler {
         FaithCraft.addToObjectList(BodyOfChrist);
         FaithCraft.addToObjectList(WineBucket);
     }
-    
-    private static void initializeContainers(){
+
+    private static void initializeContainers() {
         FluidContainerRegistry.registerFluidContainer(BlockHandler.Wine, new ItemStack(ItemHandler.WineBucket, 1, 1), new ItemStack(Item.bucketEmpty));
     }
 }

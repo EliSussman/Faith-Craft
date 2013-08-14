@@ -19,58 +19,54 @@ import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
 import net.minecraftforge.fluids.FluidRegistry;
 
-public class WineBucket extends ItemBucket{
+public class WineBucket extends ItemBucket {
 
     private String itemName;
-    
+
     public WineBucket(int id, int par1, String name) {
         super(id, par1);
         this.itemName = name;
         this.setUnlocalizedName(name);
     }
-    
+
     @ForgeSubscribe
-    public void onBucketFill( FillBucketEvent event )
-    {
-        ItemStack result = attemptFill( event.world, event.target );
-        
-        if ( result != null )
-        {
+    public void onBucketFill(FillBucketEvent event) {
+        ItemStack result = attemptFill(event.world, event.target);
+
+        if (result != null) {
             event.result = result;
-            event.setResult( Result.ALLOW );
+            event.setResult(Result.ALLOW);
         }
     }
-    
+
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
         this.itemIcon = register.registerIcon(Reference.modid + ":" + (this.getUnlocalizedName().substring(5)));
     }
-   
+
     @ForgeSubscribe(priority = EventPriority.NORMAL)
     public void FillBucket(FillBucketEvent event) {
-    ItemStack result = attemptFill(event.world, event.target);
-    if (result != null) {
-    event.result = result;
-    event.setResult(Result.ALLOW);
-    }
-    }
-
-    private ItemStack attemptFill( World world, MovingObjectPosition p )
-    {
-    int id = world.getBlockId( p.blockX, p.blockY, p.blockZ );
-
-    if ( id == IDHandler.WineID )
-    {
-    if ( world.getBlockMetadata( p.blockX, p.blockY, p.blockZ ) == 0 ) // Check that it is a source block
-    {
-    world.setBlock( p.blockX, p.blockY, p.blockZ, 0 ); // Remove the fluid block
-
-    return new ItemStack(ItemHandler.WineBucket); // Return the filled bucked item here.
-    }
+        ItemStack result = attemptFill(event.world, event.target);
+        if (result != null) {
+            event.result = result;
+            event.setResult(Result.ALLOW);
+        }
     }
 
-    return null;
+    private ItemStack attemptFill(World world, MovingObjectPosition p) {
+        int id = world.getBlockId(p.blockX, p.blockY, p.blockZ);
+
+        if (id == IDHandler.WineID) {
+            if (world.getBlockMetadata(p.blockX, p.blockY, p.blockZ) == 0) // Check that it is a source block
+            {
+                world.setBlock(p.blockX, p.blockY, p.blockZ, 0); // Remove the fluid block
+
+                return new ItemStack(ItemHandler.WineBucket); // Return the filled bucked item here.
+            }
+        }
+
+        return null;
     }
-    
+
 }

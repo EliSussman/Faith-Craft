@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
-import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.common.MinecraftForge;
+
 import common.blocks.BlockHandler;
 import common.items.ItemHandler;
+import common.items.WineBucket;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -39,6 +38,7 @@ public class FaithCraft {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        MinecraftForge.EVENT_BUS.register(new WineBucket(0, 0, null));
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
 
