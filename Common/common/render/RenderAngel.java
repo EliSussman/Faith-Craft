@@ -33,7 +33,7 @@ public class RenderAngel extends RenderLiving {
 
     @Override
     protected ResourceLocation func_110775_a(Entity entity) {
-        return new ResourceLocation("faithcraft:textures/mob/angel.png");
+        return new ResourceLocation("faithcraft", "textures/mob/angel.png");
     }
 
 }

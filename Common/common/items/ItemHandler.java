@@ -52,7 +52,7 @@ public class ItemHandler {
         FaithCraft.addToObjectList(WineBucket);
     }
 
-    private static void initializeContainers() {
+    public static void initializeContainers() {
         FluidContainerRegistry.registerFluidContainer(BlockHandler.Wine, new ItemStack(ItemHandler.WineBucket, 1, 1), new ItemStack(Item.bucketEmpty));
     }
 }

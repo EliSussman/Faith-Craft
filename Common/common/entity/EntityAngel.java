@@ -36,7 +36,7 @@ import net.minecraft.world.World;
 
 public class EntityAngel extends EntityAgeable implements IMerchant, INpc{
 
-    public EntityAngel(World par1World, int par2) {
+    public EntityAngel(World par1World) {
         super(par1World);
         this.experienceValue = 100;
         this.tasks.addTask(0, new EntityAISwimming(this));

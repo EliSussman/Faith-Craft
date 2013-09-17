@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import client.ModelAngel;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.renderer.EntityRenderer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityEggInfo;
@@ -26,6 +28,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.EntityRegistry.EntityRegistration;
 
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION)
 @NetworkMod(serverSideRequired = false, clientSideRequired = true)
@@ -40,20 +43,20 @@ public class FaithCraft {
 
     public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(), "FaithCraft");
 
-    public static int getUniqueEntityId(){
+    public static int getUniqueEntityId() {
         do {
             startEntityId++;
         }
         while (EntityList.getStringFromID(startEntityId) != null);
         return startEntityId++;
     }
-    
-    public static void registerEntityEgg(Class<? extends Entity> entity, int primaryColor, int secondaryColor){
+
+    public static void registerEntityEgg(Class<? extends Entity> entity, int primaryColor, int secondaryColor) {
         int id = getUniqueEntityId();
         EntityList.IDtoClassMapping.put(id, entity);
         EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
     }
-    
+
     @SidedProxy(clientSide = "client.ClientProxy", serverSide = "common.CommonProxy")
     public static CommonProxy proxy;
 
@@ -83,13 +86,12 @@ public class FaithCraft {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        
-        EntityRegistry.registerGlobalEntityID(EntityAngel.class, "Angel", 1);
+
+        EntityRegistry.registerGlobalEntityID(EntityAngel.class, "Angel", EntityRegistry.findGlobalUniqueEntityId());
         EntityRegistry.addSpawn(EntityAngel.class, 10, 2, 4, EnumCreatureType.creature);
         EntityRegistry.addSpawn(EntityAngel.class, 10, 2, 4, EnumCreatureType.creature);
-        EntityRegistry.findGlobalUniqueEntityId();
         registerEntityEgg(EntityAngel.class, 0xFFFF00, 0xFFFFFF);
-        
+
     }
 
     public static void addToObjectList(Object object) {
@@ -107,8 +109,6 @@ public class FaithCraft {
     private static void smeltingRecipes() {
 
     }
-    
-    
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {

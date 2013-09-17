@@ -11,6 +11,5 @@ public class ClientProxy extends CommonProxy {
     public void registerRenders() {
         RenderingRegistry.registerEntityRenderingHandler(EntityAngel.class, new RenderAngel(new ModelAngel(), 0.3F));
     }
-    
-    
+
 }
